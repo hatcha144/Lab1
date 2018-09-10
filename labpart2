@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace labpart2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome! This program finds the difference between dates in: ");
+            Console.WriteLine("days, hours, and minutes");
+          
+            Console.WriteLine();
+           
+            Console.Write("Enter any date in dd/mm/yyyy format: ");
+                        DateTime firstDate = Convert.ToDateTime(Console.ReadLine()).Date;
+
+            Console.Write("Enter another date dd/mm/yyyy format: ");
+
+            DateTime secondDate = Convert.ToDateTime(Console.ReadLine()).Date; 
+
+
+            TimeSpan Difference = secondDate.Subtract(firstDate);
+
+
+            Console.WriteLine("Number of days: " + Difference.TotalDays);
+            Console.WriteLine("Number of hours: " + Difference.TotalHours);
+            Console.WriteLine("Number of minutes: " + Difference.TotalMinutes);
+
+
+
+            Console.ReadLine();
+
+
+
+        }
+    }
+}

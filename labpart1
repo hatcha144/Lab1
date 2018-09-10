@@ -1,0 +1,58 @@
+﻿using System;
+
+namespace lab
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to Lab1, Part1");//greeting 
+
+            Console.WriteLine("");
+            bool loop = true;
+            while (loop == true)
+            {Console.Write("Enter a 3 digit number: ");
+
+            int num1 = Convert.ToInt32(Console.ReadLine()); //first number from user
+            if (num1.ToString().Length==3){
+                Console.Write("Enter another 3 digit number: ");
+
+                int num2 = Convert.ToInt32(Console.ReadLine());//second number from user 
+                if (num2.ToString().Length == 3)
+                {
+                    char[] answer1 = num1.ToString().ToCharArray();
+                    char[] answer2 = num2.ToString().ToCharArray();
+
+                    if (answer1[0] + answer2[0] == answer1[1] + answer2[1] && answer1[0] + answer2[0] == answer1[2] + answer2[2])
+                    
+                        {
+
+
+                        Console.WriteLine("{0} and {1} are equal.\n", num1, num2);
+                    }
+                    else
+                    {
+                        Console.WriteLine("{0} and {1} are not equal.\n", num1, num2);
+                    }
+                        loop = false;
+                   
+
+                }
+
+                else{
+
+                    Console.WriteLine("That is not a 3 digit number");
+                }   
+
+            
+            }
+            else{
+
+                Console.WriteLine("That is not a 3 digit number");
+            }
+            }Console.Read();
+
+        }
+
+    }
+}
